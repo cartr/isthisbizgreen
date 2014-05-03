@@ -24,7 +24,7 @@ user-select: none;
 }
 
 body {
-    font-family: Oswald, sans-serif;
+    font-family: Oswald, "Avenir Next Condensed", "Roboto Condensed", sans-serif;
     background-color:#0AB0F7;
     color:white;
 }
