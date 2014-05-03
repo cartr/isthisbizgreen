@@ -71,7 +71,7 @@ function success(position) {
 }
 
 function error(msg) {
-    document.getElementById("answer").innerHTML = "NO CLUE";
+    document.getElementById("answer").innerHTML = "I DON'T KNOW";
     document.getElementById("moreinfo").innerHTML = "There was an error determining your location."
 }
 
