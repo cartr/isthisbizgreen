@@ -5,6 +5,17 @@ html, body, #container {
     padding:0;
 }
 
+* {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Fallbacks in case browser doesn't support vw/vh units
+   These are the same measurements used on iPhone */
 h1 {
     font-size:32px;
 }
@@ -21,20 +32,22 @@ h1 {
     font-size:256px;
 }
 
-* {
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
 body {
     font-family: Oswald, sans-serif;
     background-color:#0AB0F7;
     color:white;
 }
+
+#container {
+    display: table;
+}
+
+#info {
+    display: table-row;
+    vertical-align: bottom;
+    height: 1px;
+}
+
 h1 {
     font-size:5.5vw;
     text-align:center;
@@ -50,6 +63,11 @@ h1 {
     text-align:center;
     font-weight:300;
     line-height:1em;
+    text-transform:uppercase;
+}
+#answer.y, #answer.n {
+    font-size:50vh;
+    font-weight:700;
 }
 #answer.y {
     color:green;
@@ -58,23 +76,12 @@ h1 {
 }
 #answer.n {
     color:red;
-    font-size:50vh;
-    font-weight:700;
 }
 
 #moreinfo {
     margin:0;
     font-size:8vh;
     text-align:center;
-}
-
-#info {
-    display: table-row;
-    vertical-align: bottom;
-    height: 1px;
-}
-#container {
-    display: table;
 }
 
 @media (max-width:700px), (orientation:portrait) {
@@ -98,7 +105,7 @@ h1 {
     }
 }
 
-/* iPhones suck at vw */
+/* Fallback since vw/vh is bugged on iPhone */
 @media (max-width: 321px) and (min-width:319px){
     h1 {
         font-size:32px;
