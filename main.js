@@ -2,7 +2,11 @@
 if (navigator.userAgent.indexOf('AppleWebKit') != -1) {
     var counter = 0;
     setInterval(function() {
-        jQuery("p,h1").css("z-index", counter); //Make a meaningless CSS change
+        // Meaningless CSS changes to force layout update
+        document.getElementById("appname").style.zIndex = counter;
+        document.getElementById("info").style.zIndex = counter;
+        document.getElementById("answer").style.zIndex = counter;
+        document.getElementById("moreinfo").style.zIndex = counter;
         counter++;
         counter %= 2;
     },100)
